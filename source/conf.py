@@ -30,3 +30,7 @@ gettext_compact = False
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+smv_tag_whitelist = r'^.*$'
+smv_branch_whitelist = r'^.*$'
+smv_remote_whitelist = r'^origin$'

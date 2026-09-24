@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Manfred
+# This file is distributed under the same license as the Test package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Test \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-24 11:40+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/index.rst:2
+msgid "CURQ Documentation"
+msgstr ""
+
+#: ../../source/index.rst:4
+msgid "Welcome to the CURQ Documentation."
+msgstr ""
+
+#: ../../source/index.rst:7
+msgid "Modules"
+msgstr ""
+
+#: ../../source/index.rst:9
+msgid "Accounting"
+msgstr ""
+
+#: ../../source/index.rst:10
+msgid "CRM"
+msgstr ""
+
+#: ../../source/index.rst:11
+msgid "Sales"
+msgstr ""
+
+#: ../../source/index.rst:12
+msgid "Inventory"
+msgstr ""
+
