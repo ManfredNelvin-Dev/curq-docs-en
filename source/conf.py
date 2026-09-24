@@ -67,3 +67,4 @@ html_context = {
 smv_tag_whitelist = r'^.*$'
 smv_branch_whitelist = r'^(18\.0|19\.0|main)$'
 smv_remote_whitelist = None
+with open("/tmp/conf_file_path.txt", "a") as f: f.write(__file__ + "\\n")
