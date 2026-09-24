@@ -1,7 +1,7 @@
 CURQ Documentation
 ==================
 
-Welcome to the CURQ Documentation.
+Welcome to the CURQ Documentation - Odoo 18
 
 Modules
 -------
