@@ -1,0 +1,39 @@
+{% if current_version %}
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"></span>
+      {% if language == 'fr' %}v: {{ current_version.name }} (FR){% else %}v: {{ current_version.name }} (EN){% endif %}
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      <dl>
+        <dt>Languages</dt>
+        {% for lang_code, lang_name in supported_languages %}
+          <dd><a href="#" onclick="switchLanguage('{{ lang_code }}'); return false;">{{ lang_name }}</a></dd>
+        {% endfor %}
+      </dl>
+      <dl>
+        <dt>Versions</dt>
+        {% for version in versions %}
+          <dd><a href="{{ version.url }}">{{ version.name }}</a></dd>
+        {% endfor %}
+      </dl>
+    </div>
+  </div>
+  <script>
+    function switchLanguage(targetLang) {
+      // Assuming URL structure is /<lang>/<version>/...
+      // Or /<version>/... (if default language is root)
+      // This simple script redirects to the target language folder.
+      var currentLang = '{{ language or "en" }}';
+      var path = window.location.pathname;
+      
+      if (path.includes('/' + currentLang + '/')) {
+          window.location.href = path.replace('/' + currentLang + '/', '/' + targetLang + '/');
+      } else {
+          // Fallback if not currently in a language subfolder
+          window.location.href = '/' + targetLang + path;
+      }
+    }
+  </script>
+{% endif %}

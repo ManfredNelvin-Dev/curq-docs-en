@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Test \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-24 11:40+0530\n"
+"POT-Creation-Date: 2026-09-24 20:09+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -24,7 +24,7 @@ msgid "CURQ Documentation"
 msgstr ""
 
 #: ../../source/index.rst:4
-msgid "Welcome to the CURQ Documentation."
+msgid "Welcome to the CURQ Documentation - Main Branch"
 msgstr ""
 
 #: ../../source/index.rst:7
@@ -46,4 +46,7 @@ msgstr ""
 #: ../../source/index.rst:12
 msgid "Inventory"
 msgstr ""
+
+#~ msgid "Welcome to the CURQ Documentation."
+#~ msgstr ""
 
