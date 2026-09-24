@@ -43,8 +43,6 @@ try:
 except ImportError:
     Locale = None
 
-locale_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locale')
-
 def get_language_name(code):
     if Locale:
         try:
@@ -53,19 +51,18 @@ def get_language_name(code):
             pass
     return code.upper()
 
-dynamic_languages = [('en', get_language_name('en'))]
+def add_dynamic_languages(app, pagename, templatename, context, doctree):
+    locale_dir = os.path.join(app.srcdir, 'locale')
+    dynamic_languages = [('en', get_language_name('en'))]
+    if os.path.exists(locale_dir):
+        for code in os.listdir(locale_dir):
+            if os.path.isdir(os.path.join(locale_dir, code)) and code != 'en':
+                dynamic_languages.append((code, get_language_name(code)))
+    context['supported_languages'] = dynamic_languages
 
-if os.path.exists(locale_dir):
-    for code in os.listdir(locale_dir):
-        if os.path.isdir(os.path.join(locale_dir, code)) and code != 'en':
-            dynamic_languages.append((code, get_language_name(code)))
-
-html_context = {
-    'supported_languages': dynamic_languages
-}
+def setup(app):
+    app.connect("html-page-context", add_dynamic_languages)
 
 smv_tag_whitelist = r'^.*$'
 smv_branch_whitelist = r'^(18\.0|19\.0|main)$'
 smv_remote_whitelist = None
-with open("/tmp/conf_file_path.txt", "a") as f: f.write(__file__ + "\\n")
-with open("/tmp/conf_cwd.txt", "a") as f: import os; f.write(os.getcwd() + "\\n")
